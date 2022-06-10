@@ -1,0 +1,339 @@
+daneshvar@daneshvar-ZenBook:~/Desktop/Courses/CPS/final/openauto$ git branch
+* crankshaft-ng
+daneshvar@daneshvar-ZenBook:~/Desktop/Courses/CPS/final/openauto$ git checkout fd3a00a8e3ecb430838ad263be883eed57d95a37
+Note: switching to 'fd3a00a8e3ecb430838ad263be883eed57d95a37'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at fd3a00a [QT] QT 5.15 fixes for alignment errors
+daneshvar@daneshvar-ZenBook:~/Desktop/Courses/CPS/final/openauto$ ls
+assets  CMakeLists.txt  cmake_modules  include  Readme.md  src
+daneshvar@daneshvar-ZenBook:~/Desktop/Courses/CPS/final/openauto$ mkdir build
+daneshvar@daneshvar-ZenBook:~/Desktop/Courses/CPS/final/openauto$ cd build/
+daneshvar@daneshvar-ZenBook:~/Desktop/Courses/CPS/final/openauto/build$ cmake -DCMAKE_BUILD_TYPE=Release -DAASDK_INCLUDE_DIRS="$PWD/../../aasdk/include" -DAASDK_LIBRARIES="$PWD/../../aasdk/lib/libaasdk.so" -DAASDK_PROTO_INCLUDE_DIRS="$PWD/../../aasdk/build" -DAASDK_PROTO_LIBRARIES="$PWD/../../aasdk/lib/libaasdk_proto.so" ..
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found version "1.71.0") found components: system log unit_test_framework 
+-- Found libusb-1.0:
+--  - Includes: /usr/include/libusb-1.0
+--  - Libraries: /usr/lib/x86_64-linux-gnu/libusb-1.0.so
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found version "3.6.1") 
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+-- Found rtaudio:
+--  - Includes: /usr/include/rtaudio
+--  - Libraries: /usr/lib/x86_64-linux-gnu/librtaudio.so
+-- Found taglib:
+--  - Includes: /usr/include/taglib
+--  - Libraries: /usr/lib/x86_64-linux-gnu/libtag.so;-ltag
+-- Found blkid:
+--  - Includes: /usr/include/blkid
+--  - Libraries: /usr/lib/x86_64-linux-gnu/libblkid.so
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/daneshvar/Desktop/Courses/CPS/final/openauto/build
+daneshvar@daneshvar-ZenBook:~/Desktop/Courses/CPS/final/openauto/build$ make
+Scanning dependencies of target btservice_autogen
+[  2%] Automatic MOC and UIC for target btservice
+[  2%] Built target btservice_autogen
+Scanning dependencies of target btservice
+[  4%] Building CXX object CMakeFiles/btservice.dir/btservice_autogen/mocs_compilation.cpp.o
+[  6%] Building CXX object CMakeFiles/btservice.dir/src/btservice/AndroidBluetoothServer.cpp.o
+[  9%] Building CXX object CMakeFiles/btservice.dir/src/btservice/AndroidBluetoothService.cpp.o
+[ 11%] Building CXX object CMakeFiles/btservice.dir/src/btservice/btservice.cpp.o
+[ 13%] Linking CXX executable ../bin/btservice
+[ 13%] Built target btservice
+Scanning dependencies of target autoapp_autogen
+[ 15%] Automatic MOC and UIC for target autoapp
+AutoUic: /home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/mainwindow.ui: Warning: The name 'widget' (QWidget) is already in use, defaulting to 'widget1'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/mainwindow.ui: Warning: The name 'verticalWidget_2' (QWidget) is already in use, defaulting to 'verticalWidget_21'.
+AutoUic: /home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'horizontalWidget' (QWidget) is already in use, defaulting to 'horizontalWidget1'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'widget' (QWidget) is already in use, defaulting to 'widget1'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'horizontalWidget' (QWidget) is already in use, defaulting to 'horizontalWidget2'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'horizontalWidget' (QWidget) is already in use, defaulting to 'horizontalWidget3'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'verticalWidget' (QWidget) is already in use, defaulting to 'verticalWidget1'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'horizontalWidget' (QWidget) is already in use, defaulting to 'horizontalWidget4'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'formWidget' (QWidget) is already in use, defaulting to 'formWidget1'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'horizontalWidget' (QWidget) is already in use, defaulting to 'horizontalWidget5'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'formWidget' (QWidget) is already in use, defaulting to 'formWidget2'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'formWidget' (QWidget) is already in use, defaulting to 'formWidget3'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'widget' (QWidget) is already in use, defaulting to 'widget2'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'horizontalWidget' (QWidget) is already in use, defaulting to 'horizontalWidget6'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'formWidget' (QWidget) is already in use, defaulting to 'formWidget4'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'horizontalWidget' (QWidget) is already in use, defaulting to 'horizontalWidget7'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'formWidget' (QWidget) is already in use, defaulting to 'formWidget5'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'horizontalWidget' (QWidget) is already in use, defaulting to 'horizontalWidget8'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'widget' (QWidget) is already in use, defaulting to 'widget3'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'horizontalWidget' (QWidget) is already in use, defaulting to 'horizontalWidget9'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'formWidget' (QWidget) is already in use, defaulting to 'formWidget6'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'formWidget_2' (QWidget) is already in use, defaulting to 'formWidget_21'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'widget' (QWidget) is already in use, defaulting to 'widget4'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'formWidget' (QWidget) is already in use, defaulting to 'formWidget7'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'horizontalWidget' (QWidget) is already in use, defaulting to 'horizontalWidget10'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'horizontalWidget' (QWidget) is already in use, defaulting to 'horizontalWidget11'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'horizontalWidget' (QWidget) is already in use, defaulting to 'horizontalWidget12'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'horizontalWidget' (QWidget) is already in use, defaulting to 'horizontalWidget13'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'horizontalWidget' (QWidget) is already in use, defaulting to 'horizontalWidget14'.
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/settingswindow.ui: Warning: The name 'horizontalWidget' (QWidget) is already in use, defaulting to 'horizontalWidget15'.
+[ 15%] Built target autoapp_autogen
+[ 18%] Automatic RCC for assets/resources.qrc
+Scanning dependencies of target autoapp
+[ 20%] Building CXX object CMakeFiles/autoapp.dir/autoapp_autogen/mocs_compilation.cpp.o
+[ 22%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/App.cpp.o
+[ 25%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/Configuration/Configuration.cpp.o
+[ 27%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/Configuration/RecentAddressesList.cpp.o
+[ 29%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/Projection/DummyBluetoothDevice.cpp.o
+[ 31%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/Projection/InputDevice.cpp.o
+[ 34%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/Projection/LocalBluetoothDevice.cpp.o
+[ 36%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/Projection/OMXVideoOutput.cpp.o
+[ 38%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/Projection/QtAudioInput.cpp.o
+[ 40%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/Projection/QtAudioOutput.cpp.o
+[ 43%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/Projection/QtVideoOutput.cpp.o
+[ 45%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/Projection/RemoteBluetoothDevice.cpp.o
+[ 47%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/Projection/RtAudioOutput.cpp.o
+[ 50%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/Projection/SequentialBuffer.cpp.o
+[ 52%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/Projection/VideoOutput.cpp.o
+[ 54%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/Service/AndroidAutoEntity.cpp.o
+[ 56%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/Service/AndroidAutoEntityFactory.cpp.o
+[ 59%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/Service/AudioInputService.cpp.o
+[ 61%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/Service/AudioService.cpp.o
+[ 63%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/Service/BluetoothService.cpp.o
+[ 65%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/Service/InputService.cpp.o
+[ 68%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/Service/MediaAudioService.cpp.o
+[ 70%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/Service/Pinger.cpp.o
+[ 72%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/Service/SensorService.cpp.o
+In file included from /home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/Service/SensorService.cpp:21:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/include/f1x/openauto/autoapp/Service/SensorService.hpp: In constructor ‘f1x::openauto::autoapp::service::SensorService::SensorService(boost::asio::io_service&, f1x::aasdk::messenger::IMessenger::Pointer)’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/include/f1x/openauto/autoapp/Service/SensorService.hpp:59:37: warning: ‘f1x::openauto::autoapp::service::SensorService::strand_’ will be initialized after [-Wreorder]
+   59 |     boost::asio::io_service::strand strand_;
+      |                                     ^~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/include/f1x/openauto/autoapp/Service/SensorService.hpp:58:33: warning:   ‘boost::asio::deadline_timer f1x::openauto::autoapp::service::SensorService::timer_’ [-Wreorder]
+   58 |     boost::asio::deadline_timer timer_;
+      |                                 ^~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/Service/SensorService.cpp:33:1: warning:   when initialized here [-Wreorder]
+   33 | SensorService::SensorService(boost::asio::io_service& ioService, aasdk::messenger::IMessenger::Pointer messenger)
+      | ^~~~~~~~~~~~~
+[ 75%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/Service/ServiceFactory.cpp.o
+[ 77%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/Service/SpeechAudioService.cpp.o
+[ 79%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/Service/SystemAudioService.cpp.o
+[ 81%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/Service/VideoService.cpp.o
+[ 84%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/UI/ConnectDialog.cpp.o
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/ConnectDialog.cpp: In member function ‘void f1x::openauto::autoapp::ui::ConnectDialog::onUpdateButtonClicked()’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/ConnectDialog.cpp:65:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+   65 |     system("/usr/local/bin/autoapp_helper updaterecent");
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 86%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/UI/MainWindow.cpp.o
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/MainWindow.cpp: In member function ‘void f1x::openauto::autoapp::ui::MainWindow::on_horizontalSliderVolume_valueChanged(int)’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/MainWindow.cpp:767:9: warning: unused variable ‘n’ [-Wunused-variable]
+  767 |     int n = snprintf(this->volume_str, 5, "%d", value);
+      |         ^
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/MainWindow.cpp: In member function ‘void f1x::openauto::autoapp::ui::MainWindow::customButtonPressed1()’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/MainWindow.cpp:623:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  623 |     system(qPrintable(this->custom_button_command_c1 + " &"));
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/MainWindow.cpp: In member function ‘void f1x::openauto::autoapp::ui::MainWindow::customButtonPressed2()’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/MainWindow.cpp:628:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  628 |     system(qPrintable(this->custom_button_command_c2 + " &"));
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/MainWindow.cpp: In member function ‘void f1x::openauto::autoapp::ui::MainWindow::customButtonPressed3()’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/MainWindow.cpp:633:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  633 |     system(qPrintable(this->custom_button_command_c3 + " &"));
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/MainWindow.cpp: In member function ‘void f1x::openauto::autoapp::ui::MainWindow::customButtonPressed4()’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/MainWindow.cpp:638:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  638 |     system(qPrintable(this->custom_button_command_c4 + " &"));
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/MainWindow.cpp: In member function ‘void f1x::openauto::autoapp::ui::MainWindow::customButtonPressed5()’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/MainWindow.cpp:643:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  643 |     system(qPrintable(this->custom_button_command_c5 + " &"));
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/MainWindow.cpp: In member function ‘void f1x::openauto::autoapp::ui::MainWindow::customButtonPressed6()’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/MainWindow.cpp:648:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  648 |     system(qPrintable(this->custom_button_command_c6 + " &"));
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/MainWindow.cpp: In member function ‘void f1x::openauto::autoapp::ui::MainWindow::on_horizontalSliderVolume_valueChanged(int)’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/MainWindow.cpp:770:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  770 |     system(("/usr/local/bin/autoapp_helper setvolume " + std::to_string(value) + "&").c_str());
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/MainWindow.cpp: In member function ‘void f1x::openauto::autoapp::ui::MainWindow::createDebuglog()’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/MainWindow.cpp:1068:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+ 1068 |     system("/usr/local/bin/crankshaft debuglog &");
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/MainWindow.cpp: In member function ‘void f1x::openauto::autoapp::ui::MainWindow::setPairable()’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/MainWindow.cpp:1073:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+ 1073 |     system("/usr/local/bin/crankshaft bluetooth pairable &");
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/MainWindow.cpp: In member function ‘void f1x::openauto::autoapp::ui::MainWindow::setMute()’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/MainWindow.cpp:1078:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+ 1078 |     system("/usr/local/bin/autoapp_helper setmute &");
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/MainWindow.cpp: In member function ‘void f1x::openauto::autoapp::ui::MainWindow::setUnMute()’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/MainWindow.cpp:1083:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+ 1083 |     system("/usr/local/bin/autoapp_helper setunmute &");
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 88%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/UI/SettingsWindow.cpp.o
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp: In lambda function:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp:78:70: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+   78 |     connect(ui_->pushButtonNTP, &QPushButton::clicked, [&]() { system("/usr/local/bin/crankshaft rtc sync &"); });
+      |                                                                ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp: In lambda function:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp:80:75: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+   80 |     connect(ui_->pushButtonCheckNow, &QPushButton::clicked, [&]() { system("/usr/local/bin/crankshaft update check &"); });
+      |                                                                     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp: In lambda function:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp:82:75: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+   82 |     connect(ui_->pushButtonDebuglog, &QPushButton::clicked, [&]() { system("/usr/local/bin/crankshaft debuglog &");});
+      |                                                                     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp: In lambda function:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp:83:78: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+   83 |     connect(ui_->pushButtonNetworkAuto, &QPushButton::clicked, [&]() { system("/usr/local/bin/crankshaft network auto &");});
+      |                                                                        ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp: In lambda function:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp:86:77: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+   86 |     connect(ui_->pushButtonSambaStart, &QPushButton::clicked, [&]() { system("/usr/local/bin/crankshaft samba start &");});
+      |                                                                       ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp: In lambda function:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp:87:76: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+   87 |     connect(ui_->pushButtonSambaStop, &QPushButton::clicked, [&]() { system("/usr/local/bin/crankshaft samba stop &");});
+      |                                                                      ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp: In member function ‘void f1x::openauto::autoapp::ui::SettingsWindow::onSave()’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp:464:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  464 |     system((std::string("/usr/local/bin/autoapp_helper setparams#") + std::string(params) + std::string(" &") ).c_str());
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp: In member function ‘void f1x::openauto::autoapp::ui::SettingsWindow::unpairAll()’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp:703:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  703 |     system("/usr/local/bin/crankshaft bluetooth unpair &");
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp: In member function ‘void f1x::openauto::autoapp::ui::SettingsWindow::setTime()’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp:714:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  714 |     system((std::string("/usr/local/bin/autoapp_helper settime#") + std::string(params) + std::string(" &") ).c_str());
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp: In member function ‘void f1x::openauto::autoapp::ui::SettingsWindow::syncNTPTime()’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp:719:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  719 |     system("/usr/local/bin/crankshaft rtc sync &");
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp: In member function ‘void f1x::openauto::autoapp::ui::SettingsWindow::onStartHotspot()’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp:1112:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+ 1112 |     system("/opt/crankshaft/service_hotspot.sh start &");
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp: In member function ‘void f1x::openauto::autoapp::ui::SettingsWindow::onStopHotspot()’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp:1127:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+ 1127 |     system("/opt/crankshaft/service_hotspot.sh stop &");
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp: In member function ‘void f1x::openauto::autoapp::ui::SettingsWindow::on_pushButtonAudioTest_clicked()’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp:1305:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+ 1305 |     system("/usr/local/bin/crankshaft audio test");
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp: In member function ‘void f1x::openauto::autoapp::ui::SettingsWindow::on_pushButtonNetwork0_clicked()’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp:1404:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+ 1404 |     system("/usr/local/bin/crankshaft network 0 >/dev/null 2>&1 &");
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp: In member function ‘void f1x::openauto::autoapp::ui::SettingsWindow::on_pushButtonNetwork1_clicked()’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/SettingsWindow.cpp:1414:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+ 1414 |     system("/usr/local/bin/crankshaft network 1 >/dev/null 2>&1 &");
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 90%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/UI/UpdateDialog.cpp.o
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/UpdateDialog.cpp: In member function ‘void f1x::openauto::autoapp::ui::UpdateDialog::on_pushButtonUpdateCsmt_clicked()’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/UpdateDialog.cpp:69:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+   69 |     system("crankshaft update csmt &");
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/UpdateDialog.cpp: In member function ‘void f1x::openauto::autoapp::ui::UpdateDialog::on_pushButtonUpdateUdev_clicked()’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/UpdateDialog.cpp:77:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+   77 |     system("crankshaft update udev &");
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/UpdateDialog.cpp: In member function ‘void f1x::openauto::autoapp::ui::UpdateDialog::on_pushButtonUpdateOpenauto_clicked()’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/UpdateDialog.cpp:85:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+   85 |     system("crankshaft update openauto &");
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/UpdateDialog.cpp: In member function ‘void f1x::openauto::autoapp::ui::UpdateDialog::on_pushButtonUpdateSystem_clicked()’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/UpdateDialog.cpp:94:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+   94 |     system("crankshaft update system &");
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/UpdateDialog.cpp: In member function ‘void f1x::openauto::autoapp::ui::UpdateDialog::on_pushButtonUpdateCheck_clicked()’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/UpdateDialog.cpp:102:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  102 |     system("/usr/local/bin/crankshaft update check");
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/UpdateDialog.cpp: In member function ‘void f1x::openauto::autoapp::ui::UpdateDialog::on_pushButtonUpdateCancel_clicked()’:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/UI/UpdateDialog.cpp:111:11: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  111 |     system("crankshaft update cancel &");
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 93%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/UI/WarningDialog.cpp.o
+[ 95%] Building CXX object CMakeFiles/autoapp.dir/src/autoapp/autoapp.cpp.o
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp: In lambda function:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp:123:80: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  123 |     QObject::connect(&mainWindow, &autoapp::ui::MainWindow::exit, []() { system("touch /tmp/shutdown"); std::exit(0); });
+      |                                                                          ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp: In lambda function:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp:124:82: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  124 |     QObject::connect(&mainWindow, &autoapp::ui::MainWindow::reboot, []() { system("touch /tmp/reboot"); std::exit(0); });
+      |                                                                            ~~~~~~^~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp: In lambda function:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp:140:15: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  140 |         system("/opt/crankshaft/cameracontrol.py Background &");
+      |         ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp: In lambda function:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp:145:15: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  145 |         system("/opt/crankshaft/cameracontrol.py Foreground &");
+      |         ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp: In lambda function:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp:150:15: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  150 |         system("/opt/crankshaft/cameracontrol.py PosYUp &");
+      |         ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp: In lambda function:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp:155:15: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  155 |         system("/opt/crankshaft/cameracontrol.py PosYDown &");
+      |         ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp: In lambda function:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp:160:15: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  160 |         system("/opt/crankshaft/cameracontrol.py ZoomPlus &");
+      |         ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp: In lambda function:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp:165:15: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  165 |         system("/opt/crankshaft/cameracontrol.py ZoomMinus &");
+      |         ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp: In lambda function:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp:170:15: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  170 |         system("/opt/crankshaft/cameracontrol.py Record &");
+      |         ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp: In lambda function:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp:175:15: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  175 |         system("/opt/crankshaft/cameracontrol.py Stop &");
+      |         ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp: In lambda function:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp:180:15: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  180 |         system("/opt/crankshaft/cameracontrol.py Save &");
+      |         ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp: In lambda function:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp:185:15: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  185 |         system("/opt/crankshaft/service_daynight.sh app night");
+      |         ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp: In lambda function:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp:190:15: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  190 |         system("/opt/crankshaft/service_daynight.sh app day");
+      |         ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp: In lambda function:
+/home/daneshvar/Desktop/Courses/CPS/final/openauto/src/autoapp/autoapp.cpp:228:23: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+  228 |                 system("/usr/local/bin/autoapp_helper usbreset");
+      |                 ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 97%] Building CXX object CMakeFiles/autoapp.dir/autoapp_autogen/GBFAFXFCVO/qrc_resources.cpp.o
+[100%] Linking CXX executable ../bin/autoapp
+[100%] Built target autoapp
+daneshvar@daneshvar-ZenBook:~/Desktop/Courses/CPS/final/openauto/build$ 
+

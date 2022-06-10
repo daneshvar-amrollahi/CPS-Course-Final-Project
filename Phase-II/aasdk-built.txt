@@ -1,0 +1,282 @@
+daneshvar@daneshvar-ZenBook:~/Desktop/Courses/CPS/final/aasdk/build$ git branch
+* newdev
+daneshvar@daneshvar-ZenBook:~/Desktop/Courses/CPS/final/aasdk/build$ git checkout development
+Branch 'development' set up to track remote branch 'development' from 'origin'.
+Switched to a new branch 'development'
+daneshvar@daneshvar-ZenBook:~/Desktop/Courses/CPS/final/aasdk/build$ git branch
+* development
+  newdev
+daneshvar@daneshvar-ZenBook:~/Desktop/Courses/CPS/final/aasdk/build$ cmake -DCMAKE_BUILD_TYPE=Release ..
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found version "3.6.1") 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found version "1.71.0") found components: system log unit_test_framework 
+-- Found libusb-1.0:
+--  - Includes: /usr/include/libusb-1.0
+--  - Libraries: /usr/lib/x86_64-linux-gnu/libusb-1.0.so
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/daneshvar/Desktop/Courses/CPS/final/aasdk/build
+daneshvar@daneshvar-ZenBook:~/Desktop/Courses/CPS/final/aasdk/build$ make
+[  1%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/WifiSecurityResponseMessage.proto
+[  1%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/AVChannelData.proto
+[  2%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/AVChannelMessageIdsEnum.proto
+[  2%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/AVChannelSetupRequestMessage.proto
+[  3%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/AVChannelSetupResponseMessage.proto
+[  3%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/AVChannelSetupStatusEnum.proto
+[  3%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/AVChannelStartIndicationMessage.proto
+[  4%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/AVChannelStopIndicationMessage.proto
+[  4%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/AVInputChannelData.proto
+[  5%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/AVInputOpenRequestMessage.proto
+[  5%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/AVInputOpenResponseMessage.proto
+[  5%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/AVMediaAckIndicationMessage.proto
+[  6%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/AVStreamTypeEnum.proto
+[  6%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/AbsoluteInputEventData.proto
+[  7%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/AbsoluteInputEventsData.proto
+[  7%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/AccelData.proto
+[  7%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/AudioConfigData.proto
+[  8%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/AudioFocusRequestMessage.proto
+[  8%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/AudioFocusResponseMessage.proto
+[  9%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/AudioFocusStateEnum.proto
+[  9%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/AudioFocusTypeEnum.proto
+[  9%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/AudioTypeEnum.proto
+[ 10%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/AuthCompleteIndicationMessage.proto
+[ 10%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/BindingRequestMessage.proto
+[ 11%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/BindingResponseMessage.proto
+[ 11%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/BluetoothChannelData.proto
+[ 11%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/BluetoothChannelMessageIdsEnum.proto
+[ 12%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/BluetoothPairingMethodEnum.proto
+[ 12%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/BluetoothPairingRequestMessage.proto
+[ 13%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/BluetoothPairingResponseMessage.proto
+[ 13%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/BluetoothPairingStatusEnum.proto
+[ 13%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/ButtonCodeEnum.proto
+[ 14%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/ButtonEventData.proto
+[ 14%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/ButtonEventsData.proto
+[ 15%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/ChannelDescriptorData.proto
+[ 15%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/ChannelOpenRequestMessage.proto
+[ 15%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/ChannelOpenResponseMessage.proto
+[ 16%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/CompassData.proto
+[ 16%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/ControlMessageIdsEnum.proto
+[ 17%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/DiagnosticsData.proto
+[ 17%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/DoorData.proto
+[ 17%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/DrivingStatusData.proto
+[ 18%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/DrivingStatusEnum.proto
+[ 18%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/EnvironmentData.proto
+[ 19%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/FuelLevelData.proto
+[ 19%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/GPSLocationData.proto
+[ 19%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/GearData.proto
+[ 20%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/GearEnum.proto
+[ 20%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/GyroData.proto
+[ 21%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/HVACData.proto
+[ 21%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/HeadlightStatusEnum.proto
+[ 21%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/IndicatorStatusEnum.proto
+[ 22%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/InputChannelData.proto
+[ 22%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/InputChannelMessageIdsEnum.proto
+[ 23%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/InputEventIndicationMessage.proto
+[ 23%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/LightData.proto
+[ 23%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/MediaChannelData.proto
+[ 24%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/NavigationChannelData.proto
+[ 24%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/NavigationFocusRequestMessage.proto
+[ 25%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/NavigationFocusResponseMessage.proto
+[ 25%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/NavigationImageOptionsData.proto
+[ 25%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/NightModeData.proto
+[ 26%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/OdometerData.proto
+[ 26%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/ParkingBrakeData.proto
+[ 27%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/PassengerData.proto
+[ 27%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/PingRequestMessage.proto
+[ 27%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/PingResponseMessage.proto
+[ 28%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/RPMData.proto
+[ 28%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/RelativeInputEventData.proto
+[ 29%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/RelativeInputEventsData.proto
+[ 29%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/SensorChannelData.proto
+[ 29%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/SensorChannelMessageIdsEnum.proto
+[ 30%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/SensorData.proto
+[ 30%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/SensorEventIndicationMessage.proto
+[ 31%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/SensorStartRequestMessage.proto
+[ 31%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/SensorStartResponseMessage.proto
+[ 31%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/SensorTypeEnum.proto
+[ 32%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/ServiceDiscoveryRequestMessage.proto
+[ 32%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/ServiceDiscoveryResponseMessage.proto
+[ 33%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/ShutdownReasonEnum.proto
+[ 33%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/ShutdownRequestMessage.proto
+[ 34%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/ShutdownResponseMessage.proto
+[ 34%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/SpeedData.proto
+[ 34%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/StatusEnum.proto
+[ 35%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/SteeringWheelData.proto
+[ 35%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/TouchActionEnum.proto
+[ 36%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/TouchConfigData.proto
+[ 36%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/TouchEventData.proto
+[ 36%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/TouchLocationData.proto
+[ 37%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/VendorExtensionChannelData.proto
+[ 37%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/VersionResponseStatusEnum.proto
+[ 38%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/VideoConfigData.proto
+[ 38%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/VideoFPSEnum.proto
+[ 38%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/VideoFocusIndicationMessage.proto
+[ 39%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/VideoFocusModeEnum.proto
+[ 39%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/VideoFocusReasonEnum.proto
+[ 40%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/VideoFocusRequestMessage.proto
+[ 40%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/VideoResolutionEnum.proto
+[ 40%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/WifiChannelData.proto
+[ 41%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/WifiInfoRequestMessage.proto
+[ 41%] Running cpp protocol buffer compiler on /home/daneshvar/Desktop/Courses/CPS/final/aasdk/aasdk_proto/WifiInfoResponseMessage.proto
+Scanning dependencies of target aasdk_proto
+[ 41%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/AVChannelData.pb.cc.o
+[ 41%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/AVChannelMessageIdsEnum.pb.cc.o
+[ 42%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/AVChannelSetupRequestMessage.pb.cc.o
+[ 42%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/AVChannelSetupResponseMessage.pb.cc.o
+[ 43%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/AVChannelSetupStatusEnum.pb.cc.o
+[ 43%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/AVChannelStartIndicationMessage.pb.cc.o
+[ 43%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/AVChannelStopIndicationMessage.pb.cc.o
+[ 44%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/AVInputChannelData.pb.cc.o
+[ 44%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/AVInputOpenRequestMessage.pb.cc.o
+[ 45%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/AVInputOpenResponseMessage.pb.cc.o
+[ 45%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/AVMediaAckIndicationMessage.pb.cc.o
+[ 45%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/AVStreamTypeEnum.pb.cc.o
+[ 46%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/AbsoluteInputEventData.pb.cc.o
+[ 46%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/AbsoluteInputEventsData.pb.cc.o
+[ 47%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/AccelData.pb.cc.o
+[ 47%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/AudioConfigData.pb.cc.o
+[ 47%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/AudioFocusRequestMessage.pb.cc.o
+[ 48%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/AudioFocusResponseMessage.pb.cc.o
+[ 48%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/AudioFocusStateEnum.pb.cc.o
+[ 49%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/AudioFocusTypeEnum.pb.cc.o
+[ 49%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/AudioTypeEnum.pb.cc.o
+[ 49%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/AuthCompleteIndicationMessage.pb.cc.o
+[ 50%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/BindingRequestMessage.pb.cc.o
+[ 50%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/BindingResponseMessage.pb.cc.o
+[ 51%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/BluetoothChannelData.pb.cc.o
+[ 51%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/BluetoothChannelMessageIdsEnum.pb.cc.o
+[ 51%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/BluetoothPairingMethodEnum.pb.cc.o
+[ 52%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/BluetoothPairingRequestMessage.pb.cc.o
+[ 52%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/BluetoothPairingResponseMessage.pb.cc.o
+[ 53%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/BluetoothPairingStatusEnum.pb.cc.o
+[ 53%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/ButtonCodeEnum.pb.cc.o
+[ 53%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/ButtonEventData.pb.cc.o
+[ 54%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/ButtonEventsData.pb.cc.o
+[ 54%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/ChannelDescriptorData.pb.cc.o
+[ 55%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/ChannelOpenRequestMessage.pb.cc.o
+[ 55%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/ChannelOpenResponseMessage.pb.cc.o
+[ 55%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/CompassData.pb.cc.o
+[ 56%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/ControlMessageIdsEnum.pb.cc.o
+[ 56%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/DiagnosticsData.pb.cc.o
+[ 57%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/DoorData.pb.cc.o
+[ 57%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/DrivingStatusData.pb.cc.o
+[ 57%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/DrivingStatusEnum.pb.cc.o
+[ 58%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/EnvironmentData.pb.cc.o
+[ 58%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/FuelLevelData.pb.cc.o
+[ 59%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/GPSLocationData.pb.cc.o
+[ 59%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/GearData.pb.cc.o
+[ 59%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/GearEnum.pb.cc.o
+[ 60%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/GyroData.pb.cc.o
+[ 60%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/HVACData.pb.cc.o
+[ 61%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/HeadlightStatusEnum.pb.cc.o
+[ 61%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/IndicatorStatusEnum.pb.cc.o
+[ 61%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/InputChannelData.pb.cc.o
+[ 62%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/InputChannelMessageIdsEnum.pb.cc.o
+[ 62%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/InputEventIndicationMessage.pb.cc.o
+[ 63%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/LightData.pb.cc.o
+[ 63%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/MediaChannelData.pb.cc.o
+[ 63%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/NavigationChannelData.pb.cc.o
+[ 64%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/NavigationFocusRequestMessage.pb.cc.o
+[ 64%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/NavigationFocusResponseMessage.pb.cc.o
+[ 65%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/NavigationImageOptionsData.pb.cc.o
+[ 65%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/NightModeData.pb.cc.o
+[ 65%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/OdometerData.pb.cc.o
+[ 66%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/ParkingBrakeData.pb.cc.o
+[ 66%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/PassengerData.pb.cc.o
+[ 67%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/PingRequestMessage.pb.cc.o
+[ 67%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/PingResponseMessage.pb.cc.o
+[ 67%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/RPMData.pb.cc.o
+[ 68%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/RelativeInputEventData.pb.cc.o
+[ 68%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/RelativeInputEventsData.pb.cc.o
+[ 69%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/SensorChannelData.pb.cc.o
+[ 69%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/SensorChannelMessageIdsEnum.pb.cc.o
+[ 69%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/SensorData.pb.cc.o
+[ 70%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/SensorEventIndicationMessage.pb.cc.o
+[ 70%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/SensorStartRequestMessage.pb.cc.o
+[ 71%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/SensorStartResponseMessage.pb.cc.o
+[ 71%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/SensorTypeEnum.pb.cc.o
+[ 71%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/ServiceDiscoveryRequestMessage.pb.cc.o
+[ 72%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/ServiceDiscoveryResponseMessage.pb.cc.o
+[ 72%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/ShutdownReasonEnum.pb.cc.o
+[ 73%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/ShutdownRequestMessage.pb.cc.o
+[ 73%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/ShutdownResponseMessage.pb.cc.o
+[ 73%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/SpeedData.pb.cc.o
+[ 74%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/StatusEnum.pb.cc.o
+[ 74%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/SteeringWheelData.pb.cc.o
+[ 75%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/TouchActionEnum.pb.cc.o
+[ 75%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/TouchConfigData.pb.cc.o
+[ 75%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/TouchEventData.pb.cc.o
+[ 76%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/TouchLocationData.pb.cc.o
+[ 76%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/VendorExtensionChannelData.pb.cc.o
+[ 77%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/VersionResponseStatusEnum.pb.cc.o
+[ 77%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/VideoConfigData.pb.cc.o
+[ 77%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/VideoFPSEnum.pb.cc.o
+[ 78%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/VideoFocusIndicationMessage.pb.cc.o
+[ 78%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/VideoFocusModeEnum.pb.cc.o
+[ 79%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/VideoFocusReasonEnum.pb.cc.o
+[ 79%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/VideoFocusRequestMessage.pb.cc.o
+[ 79%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/VideoResolutionEnum.pb.cc.o
+[ 80%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/WifiChannelData.pb.cc.o
+[ 80%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/WifiInfoRequestMessage.pb.cc.o
+[ 81%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/WifiInfoResponseMessage.pb.cc.o
+[ 81%] Building CXX object aasdk_proto/CMakeFiles/aasdk_proto.dir/WifiSecurityResponseMessage.pb.cc.o
+[ 82%] Linking CXX shared library ../../lib/libaasdk_proto.so
+[ 82%] Built target aasdk_proto
+Scanning dependencies of target aasdk
+[ 82%] Building CXX object CMakeFiles/aasdk.dir/src/Channel/AV/AVInputServiceChannel.cpp.o
+[ 82%] Building CXX object CMakeFiles/aasdk.dir/src/Channel/AV/AudioServiceChannel.cpp.o
+[ 83%] Building CXX object CMakeFiles/aasdk.dir/src/Channel/AV/MediaAudioServiceChannel.cpp.o
+[ 83%] Building CXX object CMakeFiles/aasdk.dir/src/Channel/AV/SpeechAudioServiceChannel.cpp.o
+[ 84%] Building CXX object CMakeFiles/aasdk.dir/src/Channel/AV/SystemAudioServiceChannel.cpp.o
+[ 84%] Building CXX object CMakeFiles/aasdk.dir/src/Channel/AV/VideoServiceChannel.cpp.o
+[ 84%] Building CXX object CMakeFiles/aasdk.dir/src/Channel/Bluetooth/BluetoothServiceChannel.cpp.o
+[ 85%] Building CXX object CMakeFiles/aasdk.dir/src/Channel/Control/ControlServiceChannel.cpp.o
+[ 85%] Building CXX object CMakeFiles/aasdk.dir/src/Channel/Input/InputServiceChannel.cpp.o
+[ 86%] Building CXX object CMakeFiles/aasdk.dir/src/Channel/Sensor/SensorServiceChannel.cpp.o
+[ 86%] Building CXX object CMakeFiles/aasdk.dir/src/Channel/ServiceChannel.cpp.o
+[ 86%] Building CXX object CMakeFiles/aasdk.dir/src/Common/Data.cpp.o
+[ 87%] Building CXX object CMakeFiles/aasdk.dir/src/Error/Error.cpp.o
+[ 87%] Building CXX object CMakeFiles/aasdk.dir/src/IO/IOContextWrapper.cpp.o
+[ 88%] Building CXX object CMakeFiles/aasdk.dir/src/Messenger/ChannelId.cpp.o
+[ 88%] Building CXX object CMakeFiles/aasdk.dir/src/Messenger/ChannelReceiveMessageQueue.cpp.o
+[ 88%] Building CXX object CMakeFiles/aasdk.dir/src/Messenger/ChannelReceivePromiseQueue.cpp.o
+[ 89%] Building CXX object CMakeFiles/aasdk.dir/src/Messenger/Cryptor.cpp.o
+[ 89%] Building CXX object CMakeFiles/aasdk.dir/src/Messenger/FrameHeader.cpp.o
+[ 90%] Building CXX object CMakeFiles/aasdk.dir/src/Messenger/FrameSize.cpp.o
+[ 90%] Building CXX object CMakeFiles/aasdk.dir/src/Messenger/Message.cpp.o
+[ 90%] Building CXX object CMakeFiles/aasdk.dir/src/Messenger/MessageId.cpp.o
+[ 91%] Building CXX object CMakeFiles/aasdk.dir/src/Messenger/MessageInStream.cpp.o
+[ 91%] Building CXX object CMakeFiles/aasdk.dir/src/Messenger/MessageOutStream.cpp.o
+[ 92%] Building CXX object CMakeFiles/aasdk.dir/src/Messenger/Messenger.cpp.o
+[ 92%] Building CXX object CMakeFiles/aasdk.dir/src/Messenger/Timestamp.cpp.o
+[ 92%] Building CXX object CMakeFiles/aasdk.dir/src/TCP/TCPEndpoint.cpp.o
+[ 93%] Building CXX object CMakeFiles/aasdk.dir/src/TCP/TCPWrapper.cpp.o
+[ 93%] Building CXX object CMakeFiles/aasdk.dir/src/Transport/DataSink.cpp.o
+[ 94%] Building CXX object CMakeFiles/aasdk.dir/src/Transport/SSLWrapper.cpp.o
+[ 94%] Building CXX object CMakeFiles/aasdk.dir/src/Transport/TCPTransport.cpp.o
+[ 94%] Building CXX object CMakeFiles/aasdk.dir/src/Transport/Transport.cpp.o
+[ 95%] Building CXX object CMakeFiles/aasdk.dir/src/Transport/USBTransport.cpp.o
+[ 95%] Building CXX object CMakeFiles/aasdk.dir/src/USB/AOAPDevice.cpp.o
+[ 96%] Building CXX object CMakeFiles/aasdk.dir/src/USB/AccessoryModeProtocolVersionQuery.cpp.o
+[ 96%] Building CXX object CMakeFiles/aasdk.dir/src/USB/AccessoryModeQuery.cpp.o
+[ 96%] Building CXX object CMakeFiles/aasdk.dir/src/USB/AccessoryModeQueryChain.cpp.o
+[ 97%] Building CXX object CMakeFiles/aasdk.dir/src/USB/AccessoryModeQueryChainFactory.cpp.o
+[ 97%] Building CXX object CMakeFiles/aasdk.dir/src/USB/AccessoryModeQueryFactory.cpp.o
+[ 98%] Building CXX object CMakeFiles/aasdk.dir/src/USB/AccessoryModeSendStringQuery.cpp.o
+[ 98%] Building CXX object CMakeFiles/aasdk.dir/src/USB/AccessoryModeStartQuery.cpp.o
+[ 98%] Building CXX object CMakeFiles/aasdk.dir/src/USB/ConnectedAccessoriesEnumerator.cpp.o
+[ 99%] Building CXX object CMakeFiles/aasdk.dir/src/USB/USBEndpoint.cpp.o
+[ 99%] Building CXX object CMakeFiles/aasdk.dir/src/USB/USBHub.cpp.o
+[100%] Building CXX object CMakeFiles/aasdk.dir/src/USB/USBWrapper.cpp.o
+[100%] Linking CXX shared library ../lib/libaasdk.so
+[100%] Built target aasdk
+daneshvar@daneshvar-ZenBook:~/Desktop/Courses/CPS/final/aasdk/build$ 
+
+
